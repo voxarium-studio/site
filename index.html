@@ -1,31 +1,90 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <title>Voxarium</title>
+  <meta name="description" content="Voxarium is a game, software and art studio that really loves voxels.">
+  <meta name="theme-color" content="#052137">
+  <meta property="og:title" content="Voxarium — a studio that loves voxels">
+  <meta property="og:description" content="We make games, software and art. Cube by cube.">
+  <meta property="og:image" content="assets/logo.png">
+  <title>Voxarium — voxel games, software and art</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a class="logo" href="/">Voxarium</a>
-      <nav class="nav"></nav>
-    </div>
-  </header>
+  <!-- Isometric cube: face colors are set via --cube-top / --cube-left / --cube-right -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="cube" viewBox="0 0 100 115.5">
+      <polygon class="cube__top" points="50,0 100,28.9 50,57.7 0,28.9"/>
+      <polygon class="cube__left" points="0,28.9 50,57.7 50,115.5 0,86.6"/>
+      <polygon class="cube__right" points="100,28.9 50,57.7 50,115.5 100,86.6"/>
+    </symbol>
+  </svg>
 
   <main>
     <section class="hero">
-      <div class="container">
+      <div class="hero__cubes" aria-hidden="true">
+        <svg class="cube cube--green hero__cube hero__cube--1"><use href="#cube"/></svg>
+        <svg class="cube cube--teal hero__cube hero__cube--2"><use href="#cube"/></svg>
+        <svg class="cube cube--orange hero__cube hero__cube--3"><use href="#cube"/></svg>
+        <svg class="cube cube--green hero__cube hero__cube--4"><use href="#cube"/></svg>
+        <svg class="cube cube--navy hero__cube hero__cube--5"><use href="#cube"/></svg>
+        <svg class="cube cube--orange hero__cube hero__cube--6"><use href="#cube"/></svg>
+      </div>
+      <div class="container hero__inner">
+        <img class="hero__logo" src="assets/logo.png" alt="Voxarium logo: a voxel tree inside a flask" width="700" height="700">
         <h1 class="hero__title">Voxarium</h1>
-        <p class="hero__subtitle"></p>
+        <ul class="hero__pillars">
+          <li class="hero__pillar">
+            <svg class="cube cube--green hero__pillar-cube" aria-hidden="true"><use href="#cube"/></svg>
+            Games
+          </li>
+          <li class="hero__pillar">
+            <svg class="cube cube--teal hero__pillar-cube" aria-hidden="true"><use href="#cube"/></svg>
+            Software
+          </li>
+          <li class="hero__pillar">
+            <svg class="cube cube--orange hero__pillar-cube" aria-hidden="true"><use href="#cube"/></svg>
+            Art
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="social">
+      <div class="container">
+        <p class="section__eyebrow">Socials</p>
+        <h2 class="section__title">Follow the cubes</h2>
+        <ul class="socials">
+          <li>
+            <a class="social social--gumroad" href="https://voxarium.gumroad.com/" target="_blank" rel="noopener">
+              <span class="social__badge" aria-hidden="true">GR</span>
+              <span class="social__body">
+                <span class="social__name">Gumroad</span>
+                <span class="social__hint">Our store</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="social social--pinterest" href="https://www.pinterest.com/voxarium/" target="_blank" rel="noopener">
+              <span class="social__badge" aria-hidden="true">PT</span>
+              <span class="social__body">
+                <span class="social__name">Pinterest</span>
+                <span class="social__hint">Art and inspiration</span>
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container footer__inner">
       <p>&copy; 2026 Voxarium</p>
     </div>
   </footer>
