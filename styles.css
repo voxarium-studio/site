@@ -201,7 +201,7 @@ a {
 .hero__cube--3 { width: 28px; top: 34%; left: 26%; animation-delay: -4s; }
 .hero__cube--4 { width: 36px; top: 22%; right: 22%; animation-delay: -1s; }
 .hero__cube--5 { width: 84px; top: 50%; right: 9%; animation-delay: -3s; }
-.hero__cube--6 { width: 32px; top: 82%; right: 16%; animation-delay: -5s; }
+.hero__cube--6 { width: 32px; top: 89%; right: 12%; animation-delay: -5s; }
 
 @keyframes float {
   0%,
@@ -244,9 +244,8 @@ a {
 
 .socials {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
-  max-width: 760px;
   margin-top: 48px;
 }
 
@@ -269,8 +268,9 @@ a {
   box-shadow: calc(var(--voxel) + 2px) calc(var(--voxel) + 2px) 0 var(--social-color);
 }
 
-.social--gumroad { --social-color: #ff90e8; }
+.social--instagram { --social-color: #d6409f; }
 .social--pinterest { --social-color: #f0384f; }
+.social--gumroad { --social-color: #ff90e8; }
 
 .social__badge {
   flex: none;
@@ -334,10 +334,6 @@ a {
 
   .hero {
     padding: 24px 0 64px;
-  }
-
-  .socials {
-    grid-template-columns: 1fr;
   }
 
   .hero__cube--2,
