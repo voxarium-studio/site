@@ -157,7 +157,7 @@ a {
   overflow: hidden;
   display: grid;
   align-items: center;
-  padding: 24px 0 32px;
+  padding: 16px 0 24px;
 }
 
 .hero__inner {
@@ -236,8 +236,8 @@ a {
 .hero__stage {
   position: relative;
   order: -1;
-  width: min(360px, 70vw, 32vh);
-  width: min(360px, 70vw, 32dvh);
+  width: min(360px, 70vw, 28vh);
+  width: min(360px, 70vw, 28dvh);
   aspect-ratio: 1;
 }
 
@@ -361,6 +361,24 @@ a {
   border-color: var(--social-color);
 }
 
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.contact__icon {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  color: var(--color-muted);
+  transition: color 200ms ease;
+}
+
 /* Footer */
 
 .footer {
@@ -383,6 +401,11 @@ a {
 @media (hover: hover) and (pointer: fine) {
   .hero__cube {
     will-change: transform;
+  }
+
+  .contact:hover,
+  .contact:hover .contact__icon {
+    color: var(--color-accent);
   }
 
   .socials:has(.social:hover) .social:not(:hover):not(:focus-visible) {
@@ -470,6 +493,10 @@ a {
   animation-delay: calc(650ms + var(--i) * 60ms);
 }
 
+.contact {
+  animation: rise 500ms var(--ease-out) 890ms backwards;
+}
+
 .hero__logo,
 .hero__grid {
   animation: stage-in 700ms var(--ease-out) 100ms backwards;
@@ -490,6 +517,7 @@ a {
   .hero__lead,
   .hero__pillar,
   .socials li,
+  .contact,
   .hero__logo,
   .hero__grid,
   .hero__cube .cube {
@@ -557,9 +585,16 @@ a {
     padding: 16px 0;
   }
 
-  .social__icon {
+  .social__icon,
+  .contact__icon {
     width: 24px;
     height: 24px;
+  }
+
+  .contact {
+    gap: 16px;
+    margin-top: 20px;
+    font-size: 1.125rem;
   }
 
   .social__arrow {
