@@ -236,8 +236,8 @@ a {
 .hero__stage {
   position: relative;
   order: -1;
-  width: min(360px, 70vw, 28vh);
-  width: min(360px, 70vw, 28dvh);
+  width: min(360px, 70vw, 24vh);
+  width: min(360px, 70vw, 24dvh);
   aspect-ratio: 1;
 }
 
@@ -294,7 +294,7 @@ a {
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
-  padding: 12px 0;
+  padding: 9px 0;
   text-decoration: none;
   transition:
     opacity 200ms ease,
@@ -306,6 +306,7 @@ a {
 }
 
 .social--instagram { --social-color: #d6409f; }
+.social--youtube { --social-color: #ff0033; }
 .social--artstation { --social-color: #13aff0; }
 .social--pinterest { --social-color: #f0384f; }
 .social--gumroad { --social-color: #ff90e8; }
@@ -494,7 +495,7 @@ a {
 }
 
 .contact {
-  animation: rise 500ms var(--ease-out) 890ms backwards;
+  animation: rise 500ms var(--ease-out) 950ms backwards;
 }
 
 .hero__logo,
@@ -582,7 +583,7 @@ a {
 
   .social {
     gap: 16px;
-    padding: 16px 0;
+    padding: 14px 0;
   }
 
   .social__icon,
